@@ -1,0 +1,56 @@
+{
+  "connection": "default",
+  "collectionName": "players",
+  "info": {
+    "name": "player",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "firstname": {
+      "default": "",
+      "type": "string"
+    },
+    "lastname": {
+      "default": "",
+      "type": "string"
+    },
+    "fullname": {
+      "default": "",
+      "type": "string"
+    },
+    "dateBirth": {
+      "default": "",
+      "type": "date"
+    },
+    "height": {
+      "default": 180,
+      "max": 220,
+      "min": 150,
+      "type": "integer"
+    },
+    "foot": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "droit",
+        "gauche",
+        "ambidextre"
+      ]
+    },
+    "poste": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "gardien",
+        " défenseur",
+        " milieu",
+        " attaquant"
+      ]
+    }
+  }
+}

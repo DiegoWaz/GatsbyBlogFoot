@@ -1,0 +1,48 @@
+{
+  "connection": "default",
+  "collectionName": "players",
+  "info": {
+    "name": "player",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "firstname": {
+      "default": "",
+      "type": "string"
+    },
+    "lastname": {
+      "default": "",
+      "type": "string"
+    },
+    "fullname": {
+      "default": "",
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "poste": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "Gardien",
+        "Défenseur",
+        "Milieu",
+        "Attaquant"
+      ]
+    },
+    "article": {
+      "collection": "article",
+      "dominant": true,
+      "via": "players"
+    }
+  }
+}

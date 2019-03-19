@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "clubteams",
+  "info": {
+    "name": "clubteam",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "yearCreation": {
+      "default": "",
+      "type": "integer"
+    },
+    "team": {
+      "model": "team",
+      "via": "clubteam"
+    },
+    "club": {
+      "model": "club",
+      "via": "clubteam"
+    },
+    "match": {
+      "model": "match",
+      "via": "teamHome"
+    },
+    "match2": {
+      "model": "match",
+      "via": "teamAway"
+    }
+  }
+}

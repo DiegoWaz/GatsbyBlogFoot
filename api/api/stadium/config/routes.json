@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/stadiums",
+      "handler": "Stadium.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/stadiums/count",
+      "handler": "Stadium.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/stadiums/:id",
+      "handler": "Stadium.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/stadiums",
+      "handler": "Stadium.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/stadiums/:id",
+      "handler": "Stadium.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/stadiums/:id",
+      "handler": "Stadium.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

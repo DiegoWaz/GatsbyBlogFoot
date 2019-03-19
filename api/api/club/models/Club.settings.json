@@ -1,0 +1,48 @@
+{
+  "connection": "default",
+  "collectionName": "clubs",
+  "info": {
+    "name": "club",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "yearFoundation": {
+      "default": "",
+      "type": "integer"
+    },
+    "teams": {
+      "collection": "team",
+      "via": "club"
+    },
+    "country": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "France",
+        "Italie",
+        "Espagne",
+        "Allemagne",
+        "Angleterre"
+      ]
+    },
+    "abbreviation": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}
