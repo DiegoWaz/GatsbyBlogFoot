@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "season",
+  "info": {
+    "name": "season",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "year": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "2019",
+        "2018",
+        "2017",
+        "2016",
+        "2015"
+      ]
+    },
+    "seasoncompetition": {
+      "collection": "seasoncompetition",
+      "via": "season"
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

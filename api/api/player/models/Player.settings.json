@@ -41,8 +41,8 @@
     },
     "article": {
       "collection": "article",
-      "dominant": true,
-      "via": "players"
+      "via": "players",
+      "dominant": true
     }
   }
 }

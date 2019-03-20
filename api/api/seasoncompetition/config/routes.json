@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/seasoncompetitions",
+      "handler": "Seasoncompetition.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/seasoncompetitions/count",
+      "handler": "Seasoncompetition.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/seasoncompetitions/:id",
+      "handler": "Seasoncompetition.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/seasoncompetitions",
+      "handler": "Seasoncompetition.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/seasoncompetitions/:id",
+      "handler": "Seasoncompetition.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/seasoncompetitions/:id",
+      "handler": "Seasoncompetition.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

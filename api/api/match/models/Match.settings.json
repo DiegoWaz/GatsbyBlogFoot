@@ -1,0 +1,43 @@
+{
+  "connection": "default",
+  "collectionName": "matches",
+  "info": {
+    "name": "match",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "team_home": {
+      "unique": true,
+      "model": "team",
+      "dominant": true
+    },
+    "team_away": {
+      "unique": true,
+      "model": "team"
+    },
+    "date": {
+      "default": "",
+      "type": "date"
+    },
+    "matchday": {
+      "default": "",
+      "type": "integer"
+    },
+    "stadium": {
+      "model": "stadium"
+    },
+    "seasoncompetition": {
+      "model": "seasoncompetition",
+      "via": "match"
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "seasonteam",
+  "info": {
+    "name": "seasonteam",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "seasoncompetition": {
+      "collection": "seasoncompetition",
+      "via": "seasonteam",
+      "dominant": true
+    },
+    "teams": {
+      "model": "team",
+      "via": "seasonteams",
+      "dominant": true
+    }
+  }
+}

@@ -28,6 +28,10 @@
     "team": {
       "model": "team",
       "via": "stadium"
+    },
+    "undefined": {
+      "model": "match",
+      "via": "stadium"
     }
   }
 }

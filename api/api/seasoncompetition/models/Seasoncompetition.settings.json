@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "seasoncompetitions",
+  "info": {
+    "name": "seasoncompetition",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "season": {
+      "model": "season",
+      "via": "seasoncompetition"
+    },
+    "competition": {
+      "model": "competition",
+      "via": "seasoncompetition",
+      "dominant": true
+    },
+    "match": {
+      "collection": "match",
+      "via": "seasoncompetition"
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "seasonteam": {
+      "collection": "seasonteam",
+      "via": "seasoncompetition"
+    }
+  }
+}

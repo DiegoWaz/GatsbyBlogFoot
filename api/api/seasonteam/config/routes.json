@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/seasonteams",
+      "handler": "Seasonteam.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/seasonteams/count",
+      "handler": "Seasonteam.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/seasonteams/:id",
+      "handler": "Seasonteam.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/seasonteams",
+      "handler": "Seasonteam.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/seasonteams/:id",
+      "handler": "Seasonteam.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/seasonteams/:id",
+      "handler": "Seasonteam.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -48,6 +48,10 @@
       "collection": "article",
       "via": "teams",
       "dominant": true
+    },
+    "seasonteams": {
+      "collection": "seasonteam",
+      "via": "teams"
     }
   }
 }

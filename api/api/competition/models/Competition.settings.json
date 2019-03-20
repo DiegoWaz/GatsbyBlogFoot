@@ -1,0 +1,86 @@
+{
+  "connection": "default",
+  "collectionName": "competitions",
+  "info": {
+    "name": "competition",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "format": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "-",
+        "championnat",
+        "coupe",
+        "poule"
+      ]
+    },
+    "section": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "-",
+        "A",
+        " B",
+        " U20",
+        " U19",
+        " U18",
+        " U17",
+        " U15"
+      ]
+    },
+    "confederation": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "-",
+        "FIFA",
+        "UEFA"
+      ]
+    },
+    "division": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "-",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "sexe": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "-",
+        "Homme",
+        "Femme"
+      ]
+    },
+    "team": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "-",
+        "club",
+        "selection"
+      ]
+    },
+    "seasoncompetition": {
+      "collection": "seasoncompetition",
+      "via": "competition"
+    }
+  }
+}
