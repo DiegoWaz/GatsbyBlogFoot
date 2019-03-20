@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/playerseasons",
+      "handler": "Playerseason.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/playerseasons/count",
+      "handler": "Playerseason.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/playerseasons/:id",
+      "handler": "Playerseason.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/playerseasons",
+      "handler": "Playerseason.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/playerseasons/:id",
+      "handler": "Playerseason.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/playerseasons/:id",
+      "handler": "Playerseason.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

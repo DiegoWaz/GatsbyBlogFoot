@@ -661,6 +661,12 @@
                 },
                 "teams": {
                   "type": "string"
+                },
+                "playerseasons": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }

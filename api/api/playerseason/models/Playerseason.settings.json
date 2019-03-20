@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "playerseasons",
+  "info": {
+    "name": "playerseason",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "numero": {
+      "default": "",
+      "max": 99,
+      "type": "integer"
+    },
+    "seasonteams": {
+      "collection": "seasonteam",
+      "via": "playerseasons",
+      "dominant": true
+    },
+    "player": {
+      "model": "player",
+      "via": "playerseasons"
+    }
+  }
+}

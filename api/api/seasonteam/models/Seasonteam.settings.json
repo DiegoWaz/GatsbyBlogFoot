@@ -24,6 +24,10 @@
       "model": "team",
       "via": "seasonteams",
       "dominant": true
+    },
+    "playerseasons": {
+      "collection": "playerseason",
+      "via": "seasonteams"
     }
   }
 }

@@ -590,6 +590,34 @@
                 }
               }
             }
+          },
+          "playerseasons": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "numero": {
+                  "type": "integer"
+                },
+                "seasonteams": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "player": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -607,6 +635,12 @@
           },
           "teams": {
             "type": "string"
+          },
+          "playerseasons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

@@ -43,6 +43,10 @@
       "collection": "article",
       "via": "players",
       "dominant": true
+    },
+    "playerseasons": {
+      "collection": "playerseason",
+      "via": "player"
     }
   }
 }

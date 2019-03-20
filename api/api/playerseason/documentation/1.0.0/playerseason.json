@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/players": {
+    "/playerseasons": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Player"
+                    "$ref": "#/components/schemas/Playerseason"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Player"
+          "Playerseason"
         ],
         "parameters": [
           {
@@ -195,7 +195,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Player"
+                  "$ref": "#/components/schemas/Playerseason"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Player"
+          "Playerseason"
         ],
         "requestBody": {
           "description": "",
@@ -241,14 +241,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPlayer"
+                "$ref": "#/components/schemas/NewPlayerseason"
               }
             }
           }
         }
       }
     },
-    "/players/count": {
+    "/playerseasons/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -300,12 +300,12 @@
         },
         "summary": "",
         "tags": [
-          "Player"
+          "Playerseason"
         ],
         "parameters": []
       }
     },
-    "/players/{id}": {
+    "/playerseasons/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -315,7 +315,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Player"
+                  "$ref": "#/components/schemas/Playerseason"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Player"
+          "Playerseason"
         ],
         "parameters": [
           {
@@ -377,7 +377,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Player"
+                  "$ref": "#/components/schemas/Playerseason"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Player"
+          "Playerseason"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPlayer"
+                "$ref": "#/components/schemas/NewPlayerseason"
               }
             }
           }
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Player"
+          "Playerseason"
         ],
         "parameters": [
           {
@@ -508,7 +508,7 @@
   },
   "components": {
     "schemas": {
-      "Player": {
+      "Playerseason": {
         "required": [
           "id"
         ],
@@ -516,118 +516,15 @@
           "id": {
             "type": "string"
           },
-          "firstname": {
+          "name": {
             "type": "string",
             "default": ""
           },
-          "lastname": {
-            "type": "string",
+          "numero": {
+            "type": "integer",
             "default": ""
           },
-          "fullname": {
-            "type": "string",
-            "default": ""
-          },
-          "image": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "public_id": {
-                "type": "string"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "poste": {
-            "type": "string",
-            "default": "",
-            "enum": [
-              "Gardien",
-              "Défenseur",
-              "Milieu",
-              "Attaquant"
-            ]
-          },
-          "article": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "category": {
-                  "type": "string"
-                },
-                "players": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "date": {
-                  "type": "string"
-                },
-                "teams": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "playerseasons": {
+          "seasonteams": {
             "type": "array",
             "items": {
               "required": [
@@ -640,16 +537,56 @@
                 "name": {
                   "type": "string"
                 },
-                "numero": {
-                  "type": "integer"
-                },
-                "seasonteams": {
+                "seasoncompetition": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "player": {
+                "teams": {
+                  "type": "string"
+                },
+                "playerseasons": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "player": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
+                "type": "string"
+              },
+              "fullname": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "poste": {
+                "type": "string"
+              },
+              "article": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "playerseasons": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
               }
@@ -657,41 +594,24 @@
           }
         }
       },
-      "NewPlayer": {
+      "NewPlayerseason": {
         "properties": {
-          "firstname": {
+          "name": {
             "type": "string",
             "default": ""
           },
-          "lastname": {
-            "type": "string",
+          "numero": {
+            "type": "integer",
             "default": ""
           },
-          "fullname": {
-            "type": "string",
-            "default": ""
-          },
-          "poste": {
-            "type": "string",
-            "default": "",
-            "enum": [
-              "Gardien",
-              "Défenseur",
-              "Milieu",
-              "Attaquant"
-            ]
-          },
-          "article": {
+          "seasonteams": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "playerseasons": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "player": {
+            "type": "string"
           }
         }
       }
@@ -699,7 +619,7 @@
   },
   "tags": [
     {
-      "name": "Player"
+      "name": "Playerseason"
     }
   ]
 }
