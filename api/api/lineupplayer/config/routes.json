@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/lineupplayers",
+      "handler": "Lineupplayer.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lineupplayers/count",
+      "handler": "Lineupplayer.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lineupplayers/:id",
+      "handler": "Lineupplayer.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/lineupplayers",
+      "handler": "Lineupplayer.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/lineupplayers/:id",
+      "handler": "Lineupplayer.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/lineupplayers/:id",
+      "handler": "Lineupplayer.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

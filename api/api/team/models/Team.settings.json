@@ -46,12 +46,16 @@
     },
     "articles": {
       "collection": "article",
-      "via": "teams",
-      "dominant": true
+      "dominant": true,
+      "via": "teams"
     },
     "seasonteams": {
       "collection": "seasonteam",
       "via": "teams"
+    },
+    "lineupteam": {
+      "model": "lineupteam",
+      "via": "team"
     }
   }
 }

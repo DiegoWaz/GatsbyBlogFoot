@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/lineups",
+      "handler": "Lineup.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lineups/count",
+      "handler": "Lineup.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lineups/:id",
+      "handler": "Lineup.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/lineups",
+      "handler": "Lineup.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/lineups/:id",
+      "handler": "Lineup.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/lineups/:id",
+      "handler": "Lineup.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

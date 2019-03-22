@@ -1201,6 +1201,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "featured": {
+                  "type": "boolean"
+                },
+                "resume": {
+                  "type": "string"
                 }
               }
             }

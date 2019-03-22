@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "lineups",
+  "info": {
+    "name": "lineup",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "match": {
+      "model": "match",
+      "via": "lineup"
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "lineupteams": {
+      "collection": "lineupteam",
+      "via": "lineup"
+    }
+  }
+}

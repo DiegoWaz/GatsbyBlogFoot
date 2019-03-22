@@ -45,6 +45,14 @@
     "teams": {
       "collection": "team",
       "via": "articles"
+    },
+    "featured": {
+      "default": false,
+      "type": "boolean"
+    },
+    "resume": {
+      "default": "",
+      "type": "text"
     }
   }
 }

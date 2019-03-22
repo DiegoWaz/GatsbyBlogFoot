@@ -623,6 +623,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "featured": {
+                  "type": "boolean"
+                },
+                "resume": {
+                  "type": "string"
                 }
               }
             }
@@ -651,6 +657,58 @@
                 },
                 "player": {
                   "type": "string"
+                },
+                "lineupplayers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "substitutes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "lineupteams": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "lineup": {
+                  "type": "string"
+                },
+                "team": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "lineupplayers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tactics": {
+                  "type": "string"
+                },
+                "coach": {
+                  "type": "string"
+                },
+                "substitutes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -688,6 +746,12 @@
             }
           },
           "playerseasons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "lineupteams": {
             "type": "array",
             "items": {
               "type": "string"

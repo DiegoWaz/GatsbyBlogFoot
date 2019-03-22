@@ -550,6 +550,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "lineupteam": {
+                "type": "string"
               }
             }
           },
@@ -587,6 +590,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "lineupteam": {
+                "type": "string"
               }
             }
           },
@@ -657,6 +663,39 @@
           "name": {
             "type": "string",
             "default": ""
+          },
+          "lineup": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "match": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "lineupteams": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "teamHomeGoalFT": {
+            "type": "integer",
+            "default": ""
+          },
+          "teamAwayGoalFT": {
+            "type": "integer",
+            "default": ""
           }
         }
       },
@@ -684,6 +723,20 @@
           },
           "name": {
             "type": "string",
+            "default": ""
+          },
+          "lineup": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "teamHomeGoalFT": {
+            "type": "integer",
+            "default": ""
+          },
+          "teamAwayGoalFT": {
+            "type": "integer",
             "default": ""
           }
         }

@@ -41,12 +41,16 @@
     },
     "article": {
       "collection": "article",
-      "via": "players",
-      "dominant": true
+      "dominant": true,
+      "via": "players"
     },
     "playerseasons": {
       "collection": "playerseason",
       "via": "player"
+    },
+    "lineupteams": {
+      "collection": "lineupteam",
+      "via": "coach"
     }
   }
 }

@@ -1,0 +1,50 @@
+{
+  "connection": "default",
+  "collectionName": "lineupteams",
+  "info": {
+    "name": "lineupteam",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "lineup": {
+      "model": "lineup",
+      "via": "lineupteams"
+    },
+    "team": {
+      "model": "team",
+      "via": "lineupteam"
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "lineupplayers": {
+      "collection": "lineupplayer",
+      "via": "lineupteam"
+    },
+    "tactics": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "4-4-2",
+        "4-3-3",
+        "4-2-3-1",
+        "3-5-2",
+        "3-4-3"
+      ]
+    },
+    "coach": {
+      "model": "player",
+      "via": "lineupteams"
+    },
+    "substitutes": {
+      "collection": "substitute",
+      "via": "lineupteams"
+    }
+  }
+}

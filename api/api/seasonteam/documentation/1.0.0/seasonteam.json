@@ -588,6 +588,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "lineupteam": {
+                "type": "string"
               }
             }
           },
@@ -615,6 +618,18 @@
                 },
                 "player": {
                   "type": "string"
+                },
+                "lineupplayers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "substitutes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }

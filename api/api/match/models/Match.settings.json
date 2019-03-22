@@ -38,6 +38,18 @@
     "name": {
       "default": "",
       "type": "string"
+    },
+    "lineup": {
+      "collection": "lineup",
+      "via": "match"
+    },
+    "teamHomeGoalFT": {
+      "default": "",
+      "type": "integer"
+    },
+    "teamAwayGoalFT": {
+      "default": "",
+      "type": "integer"
     }
   }
 }

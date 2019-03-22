@@ -1,0 +1,43 @@
+{
+  "connection": "default",
+  "collectionName": "lineupplayers",
+  "info": {
+    "name": "lineupplayer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "poste": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "Gardien",
+        " Latéral Droit",
+        " Défenseur central",
+        " Latéral gauche",
+        " Milieu Défensif",
+        " Milieu relayeur",
+        " Milieu droit",
+        " Milieu offensif",
+        " Milieu gauche",
+        " Ailier gauche",
+        " Buteur",
+        " Pivot",
+        " Ailier droit"
+      ]
+    },
+    "playerseason": {
+      "model": "playerseason",
+      "via": "lineupplayers"
+    },
+    "lineupteam": {
+      "collection": "lineupteam",
+      "dominant": true,
+      "via": "lineupplayers"
+    }
+  }
+}

@@ -636,6 +636,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "featured": {
+                  "type": "boolean"
+                },
+                "resume": {
+                  "type": "string"
                 }
               }
             }
@@ -667,6 +673,43 @@
                   "items": {
                     "type": "string"
                   }
+                }
+              }
+            }
+          },
+          "lineupteam": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "lineup": {
+                "type": "string"
+              },
+              "team": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "lineupplayers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "tactics": {
+                "type": "string"
+              },
+              "coach": {
+                "type": "string"
+              },
+              "substitutes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
               }
             }
@@ -717,6 +760,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "lineupteam": {
+            "type": "string"
           }
         }
       }

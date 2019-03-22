@@ -605,6 +605,18 @@
                 },
                 "name": {
                   "type": "string"
+                },
+                "lineup": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "teamHomeGoalFT": {
+                  "type": "integer"
+                },
+                "teamAwayGoalFT": {
+                  "type": "integer"
                 }
               }
             }

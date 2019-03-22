@@ -673,6 +673,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "lineupteams": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -717,9 +723,20 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "lineupteam": {
+                  "type": "string"
                 }
               }
             }
+          },
+          "featured": {
+            "type": "boolean",
+            "default": false
+          },
+          "resume": {
+            "type": "string",
+            "default": ""
           }
         }
       },
@@ -754,6 +771,14 @@
             "items": {
               "type": "string"
             }
+          },
+          "featured": {
+            "type": "boolean",
+            "default": false
+          },
+          "resume": {
+            "type": "string",
+            "default": ""
           }
         }
       }

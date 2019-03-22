@@ -589,6 +589,62 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "lineupteams": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "lineupplayers": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "poste": {
+                  "type": "string"
+                },
+                "playerseason": {
+                  "type": "string"
+                },
+                "lineupteam": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "substitutes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "lineupteams": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "playerseasons": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -612,6 +668,18 @@
           },
           "player": {
             "type": "string"
+          },
+          "lineupplayers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "substitutes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/20/2019 5:22:55 PM"
+    "x-generation-date": "03/22/2019 2:34:07 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2049,6 +2049,1521 @@
         "summary": "",
         "tags": [
           "Competition"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/lineups": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Lineup"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineup"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Lineup"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineup"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLineup"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lineups/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineup"
+        ],
+        "parameters": []
+      }
+    },
+    "/lineups/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Lineup"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineup"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Lineup"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineup"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLineup"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineup"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/lineupplayers": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Lineupplayer"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineupplayer"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Lineupplayer"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineupplayer"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLineupplayer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lineupplayers/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineupplayer"
+        ],
+        "parameters": []
+      }
+    },
+    "/lineupplayers/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Lineupplayer"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineupplayer"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Lineupplayer"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineupplayer"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLineupplayer"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineupplayer"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/lineupteams": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Lineupteam"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineupteam"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Lineupteam"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineupteam"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLineupteam"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lineupteams/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineupteam"
+        ],
+        "parameters": []
+      }
+    },
+    "/lineupteams/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Lineupteam"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineupteam"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Lineupteam"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineupteam"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLineupteam"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Lineupteam"
         ],
         "parameters": [
           {
@@ -5599,6 +7114,511 @@
         ]
       }
     },
+    "/substitutes": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Substitute"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Substitute"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Substitute"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Substitute"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewSubstitute"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/substitutes/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Substitute"
+        ],
+        "parameters": []
+      }
+    },
+    "/substitutes/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Substitute"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Substitute"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Substitute"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Substitute"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewSubstitute"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Substitute"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/teams": {
       "get": {
         "deprecated": false,
@@ -8325,6 +10345,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "lineupteams": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -8369,9 +10395,20 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "lineupteam": {
+                  "type": "string"
                 }
               }
             }
+          },
+          "featured": {
+            "type": "boolean",
+            "default": false
+          },
+          "resume": {
+            "type": "string",
+            "default": ""
           }
         }
       },
@@ -8406,6 +10443,14 @@
             "items": {
               "type": "string"
             }
+          },
+          "featured": {
+            "type": "boolean",
+            "default": false
+          },
+          "resume": {
+            "type": "string",
+            "default": ""
           }
         }
       },
@@ -8510,6 +10555,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "featured": {
+                  "type": "boolean"
+                },
+                "resume": {
+                  "type": "string"
                 }
               }
             }
@@ -8632,6 +10683,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "lineupteam": {
+                  "type": "string"
                 }
               }
             }
@@ -8874,6 +10928,478 @@
           }
         }
       },
+      "Lineup": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "match": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "team_home": {
+                "type": "string"
+              },
+              "team_away": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string"
+              },
+              "matchday": {
+                "type": "integer"
+              },
+              "stadium": {
+                "type": "string"
+              },
+              "seasoncompetition": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "lineup": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "teamHomeGoalFT": {
+                "type": "integer"
+              },
+              "teamAwayGoalFT": {
+                "type": "integer"
+              }
+            }
+          },
+          "name": {
+            "type": "string",
+            "default": ""
+          },
+          "lineupteams": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "lineup": {
+                  "type": "string"
+                },
+                "team": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "lineupplayers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tactics": {
+                  "type": "string"
+                },
+                "coach": {
+                  "type": "string"
+                },
+                "substitutes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewLineup": {
+        "properties": {
+          "match": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string",
+            "default": ""
+          },
+          "lineupteams": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Lineupplayer": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "poste": {
+            "type": "string",
+            "default": "",
+            "enum": [
+              "Gardien",
+              " Latéral Droit",
+              " Défenseur central",
+              " Latéral gauche",
+              " Milieu Défensif",
+              " Milieu relayeur",
+              " Milieu droit",
+              " Milieu offensif",
+              " Milieu gauche",
+              " Ailier gauche",
+              " Buteur",
+              " Pivot",
+              " Ailier droit"
+            ]
+          },
+          "playerseason": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "numero": {
+                "type": "integer"
+              },
+              "seasonteams": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "player": {
+                "type": "string"
+              },
+              "lineupplayers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "substitutes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "lineupteam": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "lineup": {
+                  "type": "string"
+                },
+                "team": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "lineupplayers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tactics": {
+                  "type": "string"
+                },
+                "coach": {
+                  "type": "string"
+                },
+                "substitutes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewLineupplayer": {
+        "properties": {
+          "poste": {
+            "type": "string",
+            "default": "",
+            "enum": [
+              "Gardien",
+              " Latéral Droit",
+              " Défenseur central",
+              " Latéral gauche",
+              " Milieu Défensif",
+              " Milieu relayeur",
+              " Milieu droit",
+              " Milieu offensif",
+              " Milieu gauche",
+              " Ailier gauche",
+              " Buteur",
+              " Pivot",
+              " Ailier droit"
+            ]
+          },
+          "playerseason": {
+            "type": "string"
+          },
+          "lineupteam": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Lineupteam": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "lineup": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "match": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "lineupteams": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "team": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "sexe": {
+                "type": "string"
+              },
+              "section": {
+                "type": "string"
+              },
+              "club": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "stadium": {
+                "type": "string"
+              },
+              "articles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "seasonteams": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "lineupteam": {
+                "type": "string"
+              }
+            }
+          },
+          "name": {
+            "type": "string",
+            "default": ""
+          },
+          "lineupplayers": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "poste": {
+                  "type": "string"
+                },
+                "playerseason": {
+                  "type": "string"
+                },
+                "lineupteam": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "tactics": {
+            "type": "string",
+            "default": "",
+            "enum": [
+              "4-4-2",
+              "4-3-3",
+              "4-2-3-1",
+              "3-5-2",
+              "3-4-3"
+            ]
+          },
+          "coach": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
+                "type": "string"
+              },
+              "fullname": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "poste": {
+                "type": "string"
+              },
+              "article": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "playerseasons": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "lineupteams": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "substitutes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "lineupteams": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "playerseasons": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewLineupteam": {
+        "properties": {
+          "lineup": {
+            "type": "string"
+          },
+          "team": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string",
+            "default": ""
+          },
+          "lineupplayers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tactics": {
+            "type": "string",
+            "default": "",
+            "enum": [
+              "4-4-2",
+              "4-3-3",
+              "4-2-3-1",
+              "3-5-2",
+              "3-4-3"
+            ]
+          },
+          "coach": {
+            "type": "string"
+          },
+          "substitutes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
       "Match": {
         "required": [
           "id"
@@ -8916,6 +11442,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "lineupteam": {
+                "type": "string"
               }
             }
           },
@@ -8953,6 +11482,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "lineupteam": {
+                "type": "string"
               }
             }
           },
@@ -9023,6 +11555,39 @@
           "name": {
             "type": "string",
             "default": ""
+          },
+          "lineup": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "match": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "lineupteams": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "teamHomeGoalFT": {
+            "type": "integer",
+            "default": ""
+          },
+          "teamAwayGoalFT": {
+            "type": "integer",
+            "default": ""
           }
         }
       },
@@ -9050,6 +11615,20 @@
           },
           "name": {
             "type": "string",
+            "default": ""
+          },
+          "lineup": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "teamHomeGoalFT": {
+            "type": "integer",
+            "default": ""
+          },
+          "teamAwayGoalFT": {
+            "type": "integer",
             "default": ""
           }
         }
@@ -9169,6 +11748,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "featured": {
+                  "type": "boolean"
+                },
+                "resume": {
+                  "type": "string"
                 }
               }
             }
@@ -9197,6 +11782,58 @@
                 },
                 "player": {
                   "type": "string"
+                },
+                "lineupplayers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "substitutes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "lineupteams": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "lineup": {
+                  "type": "string"
+                },
+                "team": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "lineupplayers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tactics": {
+                  "type": "string"
+                },
+                "coach": {
+                  "type": "string"
+                },
+                "substitutes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -9234,6 +11871,12 @@
             }
           },
           "playerseasons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "lineupteams": {
             "type": "array",
             "items": {
               "type": "string"
@@ -9322,6 +11965,62 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "lineupteams": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "lineupplayers": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "poste": {
+                  "type": "string"
+                },
+                "playerseason": {
+                  "type": "string"
+                },
+                "lineupteam": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "substitutes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "lineupteams": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "playerseasons": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -9345,6 +12044,18 @@
           },
           "player": {
             "type": "string"
+          },
+          "lineupplayers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "substitutes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -9529,6 +12240,18 @@
                 },
                 "name": {
                   "type": "string"
+                },
+                "lineup": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "teamHomeGoalFT": {
+                  "type": "integer"
+                },
+                "teamAwayGoalFT": {
+                  "type": "integer"
                 }
               }
             }
@@ -9676,6 +12399,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "lineupteam": {
+                "type": "string"
               }
             }
           },
@@ -9703,6 +12429,18 @@
                 },
                 "player": {
                   "type": "string"
+                },
+                "lineupplayers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "substitutes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -9828,6 +12566,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "lineupteam": {
+                "type": "string"
               }
             }
           },
@@ -9859,6 +12600,18 @@
               },
               "name": {
                 "type": "string"
+              },
+              "lineup": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "teamHomeGoalFT": {
+                "type": "integer"
+              },
+              "teamAwayGoalFT": {
+                "type": "integer"
               }
             }
           }
@@ -9879,6 +12632,114 @@
           },
           "undefined": {
             "type": "string"
+          }
+        }
+      },
+      "Substitute": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "lineupteams": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "lineup": {
+                  "type": "string"
+                },
+                "team": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "lineupplayers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tactics": {
+                  "type": "string"
+                },
+                "coach": {
+                  "type": "string"
+                },
+                "substitutes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "playerseasons": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "numero": {
+                "type": "integer"
+              },
+              "seasonteams": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "player": {
+                "type": "string"
+              },
+              "lineupplayers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "substitutes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "name": {
+            "type": "string",
+            "default": ""
+          }
+        }
+      },
+      "NewSubstitute": {
+        "properties": {
+          "lineupteams": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "playerseasons": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string",
+            "default": ""
           }
         }
       },
@@ -10010,6 +12871,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "featured": {
+                  "type": "boolean"
+                },
+                "resume": {
+                  "type": "string"
                 }
               }
             }
@@ -10041,6 +12908,43 @@
                   "items": {
                     "type": "string"
                   }
+                }
+              }
+            }
+          },
+          "lineupteam": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "lineup": {
+                "type": "string"
+              },
+              "team": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "lineupplayers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "tactics": {
+                "type": "string"
+              },
+              "coach": {
+                "type": "string"
+              },
+              "substitutes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
               }
             }
@@ -10091,6 +12995,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "lineupteam": {
+            "type": "string"
           }
         }
       },
@@ -10364,6 +13271,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "featured": {
+                  "type": "boolean"
+                },
+                "resume": {
+                  "type": "string"
                 }
               }
             }
@@ -10461,6 +13374,15 @@
       "name": "Competition"
     },
     {
+      "name": "Lineup"
+    },
+    {
+      "name": "Lineupplayer"
+    },
+    {
+      "name": "Lineupteam"
+    },
+    {
       "name": "Match"
     },
     {
@@ -10480,6 +13402,9 @@
     },
     {
       "name": "Stadium"
+    },
+    {
+      "name": "Substitute"
     },
     {
       "name": "Team"

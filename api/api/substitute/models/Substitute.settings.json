@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "substitutes",
+  "info": {
+    "name": "substitute",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "lineupteams": {
+      "collection": "lineupteam",
+      "via": "substitutes",
+      "dominant": true
+    },
+    "playerseasons": {
+      "model": "playerseason",
+      "via": "substitutes",
+      "dominant": true
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}
